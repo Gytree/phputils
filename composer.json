@@ -1,0 +1,17 @@
+{
+	"name": "gytree/phputils",
+	"version": "0.0.0",
+	"description": "A set of utily functions and classes",
+	"authors": [
+        	{
+            		"name": "Gytree",
+            		"email": "pedroguarimata@gmail.com"
+        	}
+    	],
+    	"autoload": {
+        	"psr-4": {
+            		"YCore\\": "src/"
+        	}
+    	},
+	"license": "BSD-3-Clause"
+}
