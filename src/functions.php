@@ -9,3 +9,14 @@ if (!function_exists('os_path_join')) {
         return \Gytree\phputils\Path::join(func_get_args());
     }
 }
+
+if (!function_exists('strings')) {
+    /**
+     * @param $string
+     * @return \Gytree\phputils\Strings
+     */
+    function strings($string)
+    {
+        return new \Gytree\phputils\Strings($string);
+    }
+}
