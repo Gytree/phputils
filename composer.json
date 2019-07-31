@@ -10,7 +10,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"Gytree\\phputils": "src/"
+			"Gytree\\phputils\\": "src/"
 		},
 		"files": [
 			"src/functions.php"
