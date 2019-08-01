@@ -10,12 +10,12 @@ if (!function_exists('os_path_join')) {
     }
 }
 
-if (!function_exists('strings')) {
+if (!function_exists('str')) {
     /**
      * @param $string
      * @return \Gytree\phputils\Strings
      */
-    function strings($string)
+    function str($string)
     {
         return new \Gytree\phputils\Strings($string);
     }

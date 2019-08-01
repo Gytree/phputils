@@ -76,7 +76,7 @@ class DirectoryClassesLoader
 
     private function isAClass($file_name)
     {
-        return strings($file_name)->endsWidth($this->classes_extension);
+        return str($file_name)->endsWidth($this->classes_extension);
     }
 
     private function include($path)
@@ -100,7 +100,7 @@ class DirectoryClassesLoader
 
     public function setBaseNamespace($namespace)
     {
-        if (!strings($namespace)->startsWidth('\\')) {
+        if (!str($namespace)->startsWidth('\\')) {
             $namespace = '\\' . $namespace;
         }
         $this->base_namespace = $namespace;
