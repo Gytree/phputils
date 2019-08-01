@@ -46,7 +46,7 @@ class DirectoryClassesLoader
     /**
      * Load all the classes in the directory structure with the require_once function
      */
-    public function requireClassesOnce()
+    public function loadClasses()
     {
         $this->loadDirectoryClasses($this->path);
     }
