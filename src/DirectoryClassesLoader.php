@@ -28,7 +28,7 @@ class DirectoryClassesLoader
     public function __construct($path)
     {
         if (!is_dir($path)) {
-            throw new \InvalidArgumentException("the given path it's not a directory");
+            throw new \InvalidArgumentException("the given path '$path' it's not a directory");
         }
         $this->path = $path;
         $this->classes = [];

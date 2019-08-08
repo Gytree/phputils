@@ -20,3 +20,15 @@ if (!function_exists('str')) {
         return new \Gytree\phputils\Strings($string);
     }
 }
+
+if (!function_exists('scandir_withoutdots')) {
+    /**
+     * Strip the '.' and '..' for the response array of scandir
+     * @param $path
+     * @return array|false
+     */
+    function scandir_withoutdots($path)
+    {
+        return \Gytree\phputils\Path::scandir($path, true);
+    }
+}
