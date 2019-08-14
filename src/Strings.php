@@ -38,4 +38,14 @@ class Strings
         }
         return $this->length;
     }
+
+    public function replace($search, $replace)
+    {
+        return new Strings(str_replace($search, $replace, $this->string));
+    }
+
+    public function __toString()
+    {
+        return $this->string;
+    }
 }
