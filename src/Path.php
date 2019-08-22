@@ -35,7 +35,7 @@ class Path
         }
         $files = self::scandir($path, true);
         foreach ($files as $file) {
-            $file_path = self::join($path, $file);
+            $file_path = os_path_join($path, $file);
             if (is_dir($file_path)) {
                 self::rmtree($file_path);
             } else {
