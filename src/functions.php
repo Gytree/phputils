@@ -48,3 +48,21 @@ if (!function_exists('str')) {
         return new \Gytree\phputils\Strings($string);
     }
 }
+
+
+if (!function_exists('cls_name')) {
+    /**
+     * Return the short name of the give namespace class
+     * @param string $class the complete class name usually the ::class property
+     * @return string
+     */
+    function cls_name($class)
+    {
+        try {
+            $reflection = new ReflectionClass($class);
+            return $reflection->getShortName();
+        } catch (ReflectionException $e) {
+            return '';
+        }
+    }
+}
