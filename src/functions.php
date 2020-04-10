@@ -66,3 +66,18 @@ if (!function_exists('cls_name')) {
         }
     }
 }
+
+
+if (!function_exists('is_phpunit')) {
+    function is_phpunit()
+    {
+        global $argv;
+        if (empty($argv)) {
+            return false;
+        }
+        $argv0 = substr($argv[0], strrpos($argv[0], '/') + 1);
+        return $argv0 === 'phpunit';
+    }
+}
+
+include "./input_functions.php";
