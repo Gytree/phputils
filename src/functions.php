@@ -80,4 +80,4 @@ if (!function_exists('is_phpunit')) {
     }
 }
 
-include "./input_functions.php";
+include __DIR__ . "/input_functions.php";
