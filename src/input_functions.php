@@ -80,7 +80,7 @@ if (!function_exists('input')) {
 }
 
 
-if (!function_exists("source_has_key")) {
+if (!function_exists("filter_source_var")) {
     function filter_source_var($source, $key, $filter, $options)
     {
         $global_name = "_" . strtoupper(get_source_name_from_id($source));
