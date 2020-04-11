@@ -1,17 +1,20 @@
 <?php
 
-const INPUTS_SOURCE_STRING_MAP = [
-    'env' => INPUT_ENV,
-    'get' => INPUT_GET,
-    'post' => INPUT_POST,
-    'cookie' => INPUT_COOKIE,
-    'server' => INPUT_SERVER,
-];
+if(!defined("INPUTS_SOURCE_STRING_MAP")){
+    define("INPUTS_SOURCE_STRING_MAP",  [
+        'env' => INPUT_ENV,
+        'get' => INPUT_GET,
+        'post' => INPUT_POST,
+        'cookie' => INPUT_COOKIE,
+        'server' => INPUT_SERVER,
+    ]);
+}
 
-
-const CUSTOM_CALLBACKS_FILTERS = [
-    'white_chars' => 'filter_no_white_chars',
-];
+if(!defined("CUSTOM_CALLBACKS_FILTERS")){
+    define("CUSTOM_CALLBACKS_FILTERS", [
+        'white_chars' => 'filter_no_white_chars',
+    ]);
+}
 
 
 if (!function_exists('filter_no_white_chars')) {
